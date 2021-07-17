@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="LogiGear Demo Shop E2E UI Appium Tests" verbose="10">
+    <!-- E2E Testsuite parameter-->
+    <parameter name="os" value="android"/>
+    <parameter name="appium-url" value="http://127.0.0.1:4723/wd/hub"/>
+    <parameter name="ios-capabilities" value="iosCapabilities.json"/>
+    <parameter name="android-capabilities" value="androidCapabilities.json"/>
+
+    <test name="E2E Demo workflow" verbose="10">
+        <classes>
+            <class name="com.sample.appium.test_scripts.E2EDemoTest"/>
+        </classes>
+    </test>
+
+</suite>

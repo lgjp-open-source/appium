@@ -1,0 +1,31 @@
+| TC_E2E_Demo Workflow | User can checkout the shoping cart with valid information                  |                                   |                                                                    |
+|----------------------|----------------------------------------------------------------------------|-----------------------------------|--------------------------------------------------------------------|
+| Test Objective       |                                                                            |                                   |                                                                    |
+| TO_E2E_01            | Verifty that user can add shopping item(s) into shopping cart successfully |                                   |                                                                    |
+| TO_E2E_02            | Verify that user can checkout the shoping cart with valid information      |                                   |                                                                    |
+| Steps                | Description                                                                | Data                              | Expected Result                                                    |
+| 1                    | Open ExpoShop mobile application                                           |                                   |                                                                    |
+| 2                    | Select the first item                                                      | Click Item: "Cotton Black Cap"    |                                                                    |
+| 3                    | Add the first item to cart                                                 | Click Button: "ADD TO CART"       |                                                                    |
+| 4                    | Go back to product page                                                    | Click Button: BACK                |                                                                    |
+| 5                    | Select the second item                                                     | Click Item: "Golden Pilot Jacket" |                                                                    |
+| 6                    | Add the second  item to cart                                               | Click Button: "ADD TO CART"       |                                                                    |
+| VP                   | Check that the selected items are added to cart                            |                                   | The shopping cart has number of items as 2                         |
+| 7                    | Open cart                                                                  | Click Item: Cart                  |                                                                    |
+| VP                   | Verify that the added items are displayed correctly in the shopping cart   |                                   | The shopping cart contains: Cotton Black Cap & Golden Pilot Jacket |
+| 8                    | Place order                                                                | Click Button: "Place Order"       |                                                                    |
+| 9                    | Add Address                                                                | Click Button: "+ ADDRESS"         | <br/>Camo Fang Backpack Jungle<br/>Knit Sweater with Zips          |
+| 10                   | Add new address                                                            | Click Button: "Add new address"   |                                                                    |
+| 11                   | Enter Name                                                                 | Iris Watson                       |                                                                    |
+| 12                   | Enter Mobile number                                                        | 3725872335                        |                                                                    |
+| 13                   | Enter Pincode                                                              | 20620                             |                                                                    |
+| 14                   | Enter House/Building                                                       | Azusa                             |                                                                    |
+| 15                   | Enter Road Name                                                            | Fusce Rd.                         |                                                                    |
+| 16                   | Enter City                                                                 | New York                          |                                                                    |
+| 17                   | Save address                                                               | Click Button: "SAVE"              |                                                                    |
+| VP                   | Check address add success                                                  |                                   | Check address appear in address list                               |
+| 18                   | Select createed address                                                    | Select radio button               |                                                                    |
+| 19                   | Go back to payment page                                                    | Click Button: BACK                |                                                                    |
+| 20                   | Place order                                                                | Click button: "PLACE ORDER"       |                                                                    |
+| VP                   | Verify that the payment is successfully                                    |                                   | The popup message displays as Successfully                         |
+| 21                   | Close popup message                                                        |

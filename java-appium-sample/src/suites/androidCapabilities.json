@@ -1,0 +1,7 @@
+{
+  "platformName": "Android",
+  "deviceName": "emulator-5554",
+  "app": "ExpoShop.apk",
+  "appPackage": "com.sample.ExpoShop",
+  "appActivity": "host.exp.exponent.MainActivity"
+}
