@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CartPage {
     @AndroidFindBy(accessibility = "place-order")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "place-order")
     private MobileElement placeOrder;
 
     private AppiumService appium;

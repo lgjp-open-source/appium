@@ -53,7 +53,7 @@ Technologies/Tools used in this sample:
 
 ## 3. Run iOS
 ### 3.1 Setup device
-- Plugin your device (your device must [Enable developer options and USB debugging](https://developer.android.com/studio/debug/dev-options)) or start an Simulator ([command line](https://developer.android.com/studio/run/emulator-commandline) or [AVD Manager](https://developer.android.com/studio/run/emulator#runningemulator))
+- Plugin your device (your device must [set up](https://appium.io/docs/en/drivers/ios-xcuitest-real-devices/#appium-xcuitest-driver-real-device-setup)) or start an [Simulator](https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html)
 - Open /appium/java-appium-sample/src/suites/androidCapabilities.json and replace "uuid"'s value with your device's uuid ([How to get your iOS uuid]())
 - Open /appium/java-appium-sample/src/suites/testng-mobile.xml and set "os" to "ios" (\<parameter name="os" value="ios"/>)
 ### 3.2 Start Appium Server
@@ -76,5 +76,6 @@ Technologies/Tools used in this sample:
 
 All steps are recorded in this following video:
 
-- Android Emulator: https://youtu.be/E-ZQe3hvnQA
-- iOS Simulator: https://youtu.be/E-ZQe3hvnQA
+- Android Emulator: https://youtu.be/32Navmixdf0
+- Android Device: https://youtu.be/DL6Nqo8HkhM
+- iOS Simulator: https://youtu.be/32Navmixdf0

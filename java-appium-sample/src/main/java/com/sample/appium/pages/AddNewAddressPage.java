@@ -10,31 +10,31 @@ import org.openqa.selenium.support.PageFactory;
 public class AddNewAddressPage {
 
     @AndroidFindBy(accessibility = "name")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "name")
     private MobileElement name;
 
     @AndroidFindBy(accessibility = "mobile-number")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "mobile-number")
     private MobileElement mobile;
 
     @AndroidFindBy(accessibility = "pincode")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "pincode")
     private MobileElement pincode;
 
     @AndroidFindBy(accessibility = "house-no")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "house-no")
     private MobileElement house;
 
     @AndroidFindBy(accessibility = "road-name")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "road-name")
     private MobileElement road;
 
     @AndroidFindBy(accessibility = "city")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "city")
     private MobileElement city;
 
     @AndroidFindBy(accessibility = "save-update-address")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "save-update-address")
     private MobileElement saveUpdateAddress;
 
     private AppiumService appium;

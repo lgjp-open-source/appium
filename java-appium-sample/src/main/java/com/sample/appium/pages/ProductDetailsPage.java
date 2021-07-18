@@ -10,15 +10,15 @@ import org.openqa.selenium.support.PageFactory;
 public class ProductDetailsPage {
 
     @AndroidFindBy(accessibility = "All Products, back")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "All Products, back")
     private MobileElement backHeaderButton;
 
     @AndroidFindBy(accessibility = "cart")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "cart")
     private MobileElement cartHeaderIcon;
 
     @AndroidFindBy(accessibility = "add-to-cart")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "add-to-cart")
     private MobileElement addToCart;
 
     private AppiumService appium;

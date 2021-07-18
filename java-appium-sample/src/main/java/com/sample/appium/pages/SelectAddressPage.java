@@ -12,11 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 public class SelectAddressPage {
 
     @AndroidFindBy(accessibility = "add-new-address")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "add-new-address")
     private MobileElement addNewAddress;
 
     @AndroidFindBy(accessibility = "Order Summary, back")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "Order Summary, back")
     private MobileElement backButton;
 
     private AppiumService appium;

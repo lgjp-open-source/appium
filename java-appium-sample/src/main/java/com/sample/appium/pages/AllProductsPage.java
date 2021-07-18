@@ -12,11 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 public class AllProductsPage {
 
     @AndroidFindBy(accessibility = "cart")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "cart")
     private MobileElement cartHeaderIcon;
 
     @AndroidFindBy(accessibility = "cart-count")
-    @iOSXCUITFindBy(id = "")
+    @iOSXCUITFindBy(id = "cart-count")
     private MobileElement cartCount;
 
     private AppiumService appium;
