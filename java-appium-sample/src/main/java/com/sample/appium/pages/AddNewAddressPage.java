@@ -10,27 +10,27 @@ import org.openqa.selenium.support.PageFactory;
 public class AddNewAddressPage {
 
     @AndroidFindBy(accessibility = "name")
-    @iOSXCUITFindBy(id = "name")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeTextField[`label == \"name\"`]")
     private MobileElement name;
 
     @AndroidFindBy(accessibility = "mobile-number")
-    @iOSXCUITFindBy(id = "mobile-number")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeTextField[`label == \"mobile-number\"`]")
     private MobileElement mobile;
 
     @AndroidFindBy(accessibility = "pincode")
-    @iOSXCUITFindBy(id = "pincode")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeTextField[`label == \"pincode\"`]")
     private MobileElement pincode;
 
     @AndroidFindBy(accessibility = "house-no")
-    @iOSXCUITFindBy(id = "house-no")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeTextField[`label == \"house-no\"`]")
     private MobileElement house;
 
     @AndroidFindBy(accessibility = "road-name")
-    @iOSXCUITFindBy(id = "road-name")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeTextField[`label == \"road-name\"`]")
     private MobileElement road;
 
     @AndroidFindBy(accessibility = "city")
-    @iOSXCUITFindBy(id = "city")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeTextField[`label == \"city\"`]")
     private MobileElement city;
 
     @AndroidFindBy(accessibility = "save-update-address")
@@ -69,6 +69,7 @@ public class AddNewAddressPage {
     }
 
     public SelectAddressPage saveUpdateAddress() {
+        appium.hideIOSKeyboard();
         appium.click(saveUpdateAddress);
         return new SelectAddressPage(appium);
     }

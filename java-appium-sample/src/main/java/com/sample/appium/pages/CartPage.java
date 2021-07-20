@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CartPage {
     @AndroidFindBy(accessibility = "place-order")
-    @iOSXCUITFindBy(id = "place-order")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeOther[`label == \"place-order\"`]")
     private MobileElement placeOrder;
 
     private AppiumService appium;
@@ -27,8 +27,7 @@ public class CartPage {
     }
 
     public Boolean checkItemExists(String itemName) {
-        By xpath = MobileBy.xpath(String.format("//*[@text='%s' or @label='%s']", itemName, itemName));
-        MobileElement item = appium.findElement(xpath);
+        MobileElement item = appium.findElementContainText(itemName);
         if(item != null)
             return true;
         return false;

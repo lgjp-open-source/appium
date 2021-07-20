@@ -13,7 +13,7 @@ Technologies/Tools used in this sample:
 [E2E_Workflow](./E2E_Workflow.md)
 
 # Prerequisites
-1.  Java Development Kit 8 or above [https://java.com/en/download/help/download_options.html]
+1.  Java Development Kit 8 -15 [https://java.com/en/download/help/download_options.html]
 2.  Maven [ http://maven.apache.org/install.html ]
 3.  Appium
    - Appium server (via [npm](https://appium.io/docs/en/about-appium/getting-started/?lang=en) or [Desktop Application](https://github.com/appium/appium-desktop))
@@ -52,10 +52,11 @@ Technologies/Tools used in this sample:
 ![alt text](./images/IntIntelliJ.png)
 
 ## 3. Run iOS
-### 3.1 Setup device
-- Plugin your device (your device must [set up](https://appium.io/docs/en/drivers/ios-xcuitest-real-devices/#appium-xcuitest-driver-real-device-setup)) or start an [Simulator](https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html)
-- Open /appium/java-appium-sample/src/suites/androidCapabilities.json and replace "uuid"'s value with your device's uuid ([How to get your iOS uuid]())
+### 3.1 Setup device & application
+- Plugin your device (your device must [set up](https://appium.io/docs/en/drivers/ios-xcuitest-real-devices/#appium-xcuitest-driver-real-device-setup))
+- Open /appium/java-appium-sample/src/suites/androidCapabilities.json and set your simulator or device's capabilities as [Appium capabilities](https://appium.io/docs/en/drivers/ios-xcuitest/#capabilities)
 - Open /appium/java-appium-sample/src/suites/testng-mobile.xml and set "os" to "ios" (\<parameter name="os" value="ios"/>)
+- Open /appium/java-appium-sample/src/test/resources and double-click ```ExpoShop-simulator.tar.gz``` to extract it.
 ### 3.2 Start Appium Server
 - Via [npm](https://appium.io/docs/en/about-appium/getting-started/?lang=en) or [Appium Desktop application]()
 ### 3.3 Run test

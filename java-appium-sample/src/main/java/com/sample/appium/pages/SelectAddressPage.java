@@ -12,12 +12,13 @@ import org.openqa.selenium.support.PageFactory;
 public class SelectAddressPage {
 
     @AndroidFindBy(accessibility = "add-new-address")
-    @iOSXCUITFindBy(id = "add-new-address")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeOther[`label == \"add-new-address\"`][9]")
     private MobileElement addNewAddress;
 
     @AndroidFindBy(accessibility = "Order Summary, back")
     @iOSXCUITFindBy(id = "Order Summary, back")
     private MobileElement backButton;
+
 
     private AppiumService appium;
 
@@ -32,10 +33,8 @@ public class SelectAddressPage {
     }
 
     public void selectAddress(String name) {
-        By xpath = MobileBy.xpath(String.format("//*[@text='%s' or @label='%s']", name, name));
-        MobileElement address = appium.findElement(xpath);
+        MobileElement address = appium.findElementContainText(name);
         appium.click(address);
-
     }
 
     public OrderSumaryPage goBack () {
@@ -44,8 +43,7 @@ public class SelectAddressPage {
     }
 
     public Boolean checkAddressExists (String name) {
-        By xpath = MobileBy.xpath(String.format("//*[@text='%s' or @label='%s']", name, name));
-        MobileElement address = appium.findElement(xpath);
+        MobileElement address = appium.findElementContainText(name);
         if (address != null)
             return true;
         return false;

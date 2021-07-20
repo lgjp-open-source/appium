@@ -45,6 +45,7 @@ public class AppiumService {
     }
 
     public AppiumDriver getDriver() { return driver; }
+    public String getPlatformName() { return platformName; }
 
     public void setDriver(AppiumDriver driver2) { driver = driver2; }
 
@@ -120,20 +121,57 @@ public class AppiumService {
     }
 
     public void closePopup() {
-        By id = MobileBy.id("android:id/button1");
-        MobileElement okBtn = findElement(id);
+        String id="";
+        switch(platformName) {
+            case "Android":
+                id = "android:id/button1";
+                break;
+            case "iOS":
+                id = "Ok";
+                break;
+        }
+        MobileElement okBtn = findElement(MobileBy.id(id));
         click(okBtn);
     }
 
     public Boolean checkPopupWithTitleExists(String title) {
-        By id = MobileBy.id("android:id/alertTitle");
-        MobileElement titleTextbox = findElement(id);
-        if ( titleTextbox!= null && titleTextbox.getText().equals(title))
-            return true;
+        switch(platformName) {
+            case "Android":
+                By id = MobileBy.id("android:id/alertTitle");
+                MobileElement titleTextbox = findElement(id);
+                if ( titleTextbox!= null && titleTextbox.getText().equals(title))
+                    return true;
+                break;
+            case "iOS":
+                MobileElement popup =  findElementContainText(title);
+                if (popup != null)
+                    return true;
+                break;
+        }
         return false;
     }
 
     public MobileElement findElement(By by) {
         return (MobileElement) driver.findElement(by);
+    }
+
+    // driver.hideKeyboard() not work on some iOS simulator/ devices
+    public void hideIOSKeyboard() {
+        if(platformName.equals("iOS")) {
+            MobileElement element = findElement(MobileBy.id("Return"));
+            if (element != null)
+                element.click();
+        }
+    }
+
+    public MobileElement findElementContainText(String text) {
+        String by="";
+        WebDriverWait wait = new WebDriverWait(getDriver(), TestUtils.WAIT);
+        if(platformName.equals("Android"))
+            by = String.format("//*[@text='%s']", text, text);
+        else if (platformName.equals("iOS"))
+            by =String.format("(//*[contains(@label, '%s')])[last()]",  text);
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(MobileBy.xpath(by), text));
+        return findElement(MobileBy.xpath(by));
     }
 }

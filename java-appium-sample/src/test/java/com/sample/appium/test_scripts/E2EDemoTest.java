@@ -16,8 +16,8 @@ public class E2EDemoTest extends AbstractTest {
 
     @BeforeClass
     public void beforeClass() {
-        service.closeApp();
-        service.launchApp();
+        //service.closeApp();
+        //service.launchApp();
     }
 
     @Test(description = "User can checkout the shopping cart with valid information")
@@ -32,7 +32,7 @@ public class E2EDemoTest extends AbstractTest {
         homePage = addItem(homePage, "Golden Pilot Jacket");
 
         // Verify 2 item added to cart
-        //assertEquals(2,homePage.getCartCount());
+        assertEquals(2,homePage.getCartCount());
 
         // Open Cart
         CartPage cartPage = homePage.openCart();

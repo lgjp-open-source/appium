@@ -9,11 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OrderSumaryPage {
     @AndroidFindBy(accessibility = "add-select-address")
-    @iOSXCUITFindBy(id = "add-select-address")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeOther[`label == \"add-select-address\"`][2]")
     private MobileElement addAddress;
 
     @AndroidFindBy(accessibility = "place-order")
-    @iOSXCUITFindBy(id = "place-order")
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeOther[`label == \"place-order\"`]")
     private MobileElement placeOrder;
 
     private AppiumService appium;
