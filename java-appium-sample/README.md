@@ -79,4 +79,4 @@ All steps are recorded in this following video:
 
 - Android Emulator: https://youtu.be/32Navmixdf0
 - Android Device: https://youtu.be/DL6Nqo8HkhM
-- iOS Simulator: https://youtu.be/32Navmixdf0
+- iOS Simulator: https://youtu.be/jizJ4Q-4BNU
